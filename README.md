@@ -58,12 +58,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-#                          Laravel Learning Journey for Backend Development
----
-## 🚀 What is Laravel?
-
-Laravel is a modern, elegant PHP framework designed for developers who need a simple yet powerful toolkit to build full-featured web applications. Created by **Taylor Otwell**, it follows the MVC (Model-View-Controller) architectural pattern and provides expressive, beautiful syntax that makes web development tasks—like routing, authentication, caching, and sessions—more enjoyable.
-
 
 ##  👨‍💻 About My Learning Journey
 I'm diving into Laravel to build a solid foundation in backend development. My goal is to master this technology to create scalable, maintainable web applications and APIs. As someone committed to professional growth in web development, I recognize Laravel's industry relevance, its elegant syntax, and the strong community support that makes it an excellent choice for both learning and professional projects.
