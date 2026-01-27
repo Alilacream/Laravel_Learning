@@ -1,5 +1,5 @@
 
-@props(['chirps'])
+@props(['chirp'])
 
 <div class="card bg-base-100 shadow">
     <div class="card-body">

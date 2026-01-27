@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chirp;
 use Illuminate\Http\Request;
 
 class ChirpController extends Controller
@@ -11,13 +12,9 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        $chirps = [
-            "Ali"=>"19",
-            "Sara"=>"18",
-            "Mohammed"=>"23",
-            "Reda"=> "23"
-        ]; 
-        return view("home", ['chirps'=> $chirps]);
+        $chirps = Chirp::all(); 
+
+        return view("home", compact('chirps'));
     }
 
     /**
