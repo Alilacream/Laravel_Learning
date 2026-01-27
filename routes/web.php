@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeders\ChirpSeeder;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ChirpController;
