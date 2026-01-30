@@ -6,6 +6,32 @@
 
     <div class="max-w-2xl mx-auto">
         <h1 class="text-3xl font-bold mt-8">Latest Chirps</h1>
+        <div class="card bg-base-100 shadow mt-8">
+            <div class="card-body border">
+                <form method= "POST" action="/chirps">
+                    @csrf
+                    <!--the cross site rendering forgery-->
+                    <div class="form-control w-full">
+                        <textarea name="message" placeholder="What's up ?" 
+                        class="textarea textarea-border w-full" rows="4" maxlength="500"
+                        
+                        >{{ old('message')  }}</textarea>
+
+                @error('message')
+                    <div class="label">
+                        <span class="label-text-alt text-error">{{ $message }}</span>
+                    </div>
+                @enderror
+                    </div>
+                    
+                    <!--the csrf-->
+                    <div class="mt-4 flex items-center justify-end">
+                        <button type"submit" class="btn btn-primary btn-sm">Sumbit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
 
         <div class="space-y-4 mt-8">
             @forelse ($chirps as $chirp)
