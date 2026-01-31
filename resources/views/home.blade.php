@@ -1,4 +1,8 @@
-
+<head>
+    <title>
+        {{ env("APP_NAME")  }}
+    </title>
+</head>
 <x-layout>
     <x-slot:title>
         Home Feed
