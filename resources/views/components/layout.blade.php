@@ -18,8 +18,17 @@
             <a href="/" class="btn btn-ghost text-xl">🐦 Chirper</a>
         </div>
         <div class="navbar-end gap-2">
-            <a href="#" class="btn btn-ghost btn-sm">Sign In</a>
-            <a href="#" class="btn btn-primary btn-sm">Sign Up</a>
+            @auth
+            <span class="text-sm">{{ auth()->user()->name  }}</span>
+            <form action="/logout" method="POST">
+                @csrf
+                <button type="sumbit" class="rounded-md bg-red-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+                    Logout</button>
+            </form>
+            @else
+            <a href="/login" class="btn btn-ghost btn-sm">Sign In</a>
+            <a href="/register" class="btn btn-primary btn-sm">Sign Up</a> 
+             @endauth
         </div>
     </nav>
 <!-- Success Toast -->
