@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\Logout;
 use App\Http\Controllers\Auth\Register;
 use Illuminate\Support\Facades\Route;
@@ -25,9 +26,18 @@ Route::middleware('auth')->group(Routes());
 
 // Register Routes
 Route::view('/register', 'auth.registre')
-     // i don't know what this does
+    // i don't quite understand the use of middleware, but it safe to assume.
+    //it's for safety.
     ->middleware('guest')
     ->name('register');
 Route::post('/register', Register::class)
     ->middleware('guest');
+//Logout
 Route::post('/logout', Logout::class);
+
+
+// Login Routes
+Route::view('/login', 'auth.login')
+    ->middleware('guest')
+    ->name('login');
+Route::post('/login', Login::class);
